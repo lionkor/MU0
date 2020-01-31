@@ -127,14 +127,15 @@ public:
         LOG("Decoded => STP");
     }
 
+    constexpr static std::size_t s_mem_size = 4096;
+
 private:
-    constexpr static std::size_t s_mem_size = 4096 * 2;
-    std::uint16_t*               memory;
-    std::uint16_t                pc;
-    std::uint16_t                acc;
+    std::uint16_t* memory;
+    std::uint16_t  pc;
+    std::uint16_t  acc;
 };
 
-int main() {
+int main(int argc, char** argv) {
     MU0 proc;
 
     while (true) {

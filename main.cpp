@@ -22,7 +22,9 @@ class MU0
 {
 public:
     MU0(const std::string& filepath)
-        : memory(new std::uint16_t[s_mem_size]), pc(0) {
+        : memory(new std::uint16_t[s_mem_size])
+        , pc(0)
+        , acc(0) {
         std::ifstream file(filepath, std::ios::binary | std::ios::in);
 
         file.read(reinterpret_cast<char*>(memory), s_mem_size);
@@ -79,10 +81,6 @@ public:
             LOG("not implemented: " << std::hex << i->opcode);
             break;
         }
-    }
-
-    std::uint16_t read_16(std::size_t i) {
-        return *reinterpret_cast<std::uint16_t*>(memory + i);
     }
 
     void instr_lda(instruction_t* i) {

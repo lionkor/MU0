@@ -21,9 +21,9 @@ struct instruction_t {
 class MU0
 {
 public:
-    MU0()
+    MU0(const std::string& filepath)
         : memory(new std::uint16_t[s_mem_size]), pc(0) {
-        std::ifstream file("memory.bin", std::ios::binary | std::ios::in);
+        std::ifstream file(filepath, std::ios::binary | std::ios::in);
 
         file.read(reinterpret_cast<char*>(memory), s_mem_size);
 
@@ -136,7 +136,13 @@ private:
 };
 
 int main(int argc, char** argv) {
-    MU0 proc;
+    std::string filename = "memory.bin";
+
+    if (argc == 2) {
+        filename = argv[1];
+    }
+
+    MU0 proc(filename);
 
     while (true) {
         proc.step();

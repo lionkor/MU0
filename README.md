@@ -3,6 +3,8 @@
 A simple model emulator as preparation for a bigger project.
 Open source, GPL-2.0
 
+Check out the assembler at [lionkor/MU0-asm](https://github.com/lionkor/MU0-asm).
+
 ## How to build
 
 1. Clone this repo recursively with `git clone [URL] --recursive`.

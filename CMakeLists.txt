@@ -7,11 +7,3 @@ project(MU0)
 
 add_executable(${CMAKE_PROJECT_NAME} main.cpp)
 
-include_directories(Catch2/single_include/catch2)
-
-project(tests)
-
-add_executable(${CMAKE_PROJECT_NAME} 
-    tests/tests.cpp
-    tests/test_bitops.cpp
-)

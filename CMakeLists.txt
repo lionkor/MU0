@@ -15,4 +15,3 @@ add_executable(${CMAKE_PROJECT_NAME}
     tests/tests.cpp
     tests/test_bitops.cpp
 )
-

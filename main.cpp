@@ -4,7 +4,6 @@
 #include <algorithm>
 #include <chrono>
 #include <fstream>
-#include "bitops.h"
 
 #define LFN() std::cout << "`" << __PRETTY_FUNCTION__ << "` called" << std::endl
 #define LOG(x) std::cout << __FUNCTION__ << ":" << std::dec << __LINE__ << ": " << x << std::endl

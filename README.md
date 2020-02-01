@@ -3,14 +3,11 @@
 A simple model emulator as preparation for a bigger project.
 Open source, GPL-2.0
 
-The `bitops.h` is part of this, although i didn't end up needing it at all. Tests in `tests` directory only test bitops. I'll probably pull that whole thing out into a seperate project, since it's basically deadweight here.
-
-
 ## How to build
 
 1. Clone this repo recursively with `git clone [URL] --recursive`.
 
-2. Run `cmake . && make MU0`.
+2. Run `cmake . && make`.
 
 This should compile the program into a binary called `MU0`.
 
